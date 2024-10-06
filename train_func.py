@@ -4,7 +4,7 @@ from data_loader import load_data
 from model_loader import use_model_classifier
 import time
 
-# TODO: Save the checkpoint
+#  Save the checkpoint
 def save_checkpoint(model, optimizer, class_to_idx, input_size, output_size, hidden_units, epochs, arch, file_path='checkpoint.pth'):
     model.class_to_idx = class_to_idx
     # Create a dictionary for saving the checkpoint

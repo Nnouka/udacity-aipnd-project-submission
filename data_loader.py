@@ -5,7 +5,7 @@ import json
 
 
 def load_data(data_dir):
-    # TODO: Define your transforms for the training, validation, and testing sets
+    # Define your transforms for the training, validation, and testing sets
     train_dir = data_dir + '/train'
     valid_dir = data_dir + '/valid'
     test_dir = data_dir + '/test'
@@ -30,14 +30,14 @@ def load_data(data_dir):
         ])
     }
 
-    # TODO: Load the datasets with ImageFolder
+    #  Load the datasets with ImageFolder
     image_datasets = {
         'train': datasets.ImageFolder(train_dir, transform=data_transforms['train']),
         'valid': datasets.ImageFolder(valid_dir, transform=data_transforms['valid']),
         'test': datasets.ImageFolder(test_dir, transform=data_transforms['test'])
     }
 
-    # TODO: Using the image datasets and the trainforms, define the dataloaders
+    #  Using the image datasets and the trainforms, define the dataloaders
     dataloaders = {
         'train': DataLoader(image_datasets['train'], batch_size=64, shuffle=True),
         'valid': DataLoader(image_datasets['valid'], batch_size=64, shuffle=False),
